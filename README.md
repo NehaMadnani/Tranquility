@@ -42,11 +42,13 @@ To merge your changes into the main project, follow these steps:
 4. In queryTool paste the SQL query present in file: `tablesMigration.sql` and click on Execute/Refresh option.
 5. tranquilityDatabase is now created and setup with the required tables
 6. Double check with database properties mentioned below and make necessary changes accordingly in `tranquility-backend-v1/index.js`  
-            `host: 'localhost'`
-            `database: 'tranquilityDatabase'`
-            `user: 'tranquilityAdmin'`
-            `password: 'tranquilityAdmin'`
-            `port: 5433`
+            ```
+            host: 'localhost'
+            database: 'tranquilityDatabase'
+            user: 'tranquilityAdmin'
+            password: 'tranquilityAdmin'
+            port: 5433
+            ```
 8. Insert/create few user before you proceed with any other tasks. Refer Postman collection `Create User` and create users with different email addresses.
 
 ## To start the backend application server:
@@ -56,20 +58,22 @@ To merge your changes into the main project, follow these steps:
 
 ## Routes
 
-- GET  /users
-    This route fetches all the existing users
-- POST  /users 
-    This route used to create a user
-    Note: field email is UNIQUE and hence duplicates are not allowed. Use different email value for every new request
-    Refer: Postman Collection's `Create User /users`
+- **GET  /users**
+    - This route fetches all the existing users
+    - Refer: Postman Collection's `Get all users /users`
 
-- POST  /questionnaire
-    This route is used to set the questionnaire for exisiting users
-    Refer: Postman Collection's `Questionnaire /questionnaire`
+- **POST  /users** 
+    - This route used to create a user
+    - Note: field email is UNIQUE and hence duplicates are not allowed. Use different email value for every new request
+    - Refer: Postman Collection's `Create User /users`
 
-- POST  /userinteractionfeedback
-    This route is used to set the user interaction feedback for the media files
-    Refer: Postman Collection's `Media Feedback /userinteractionfeedback`
+- **POST  /questionnaire**
+    - This route is used to set the questionnaire for exisiting users
+    - Refer: Postman Collection's `Questionnaire /questionnaire`
+
+- **POST  /userinteractionfeedback**
+    - This route is used to set the user interaction feedback for the media files
+    - Refer: Postman Collection's `Media Feedback /userinteractionfeedback`
     
 ## Test Cases
 Explore our detailed test cases to understand the functionalities better:
