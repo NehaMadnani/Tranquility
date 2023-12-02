@@ -30,25 +30,28 @@ To merge your changes into the main project, follow these steps:
 - Write test cases with the `.spec.js` file extension.
 
 ## Technical Pre_requisites to setup backend:
-1. PostgreSQL 16
-2. PgAdmin for PostgreSQL GUI
-3. Node : v16.20.2
-4. npm : 8.19.4
+1. PostgreSQL 16 [Link](https://www.postgresql.org/download/)
+2. PgAdmin for PostgreSQL GUI [Link](https://www.pgadmin.org/download/)
+3. Node: v16.20.2 [Link](https://nodejs.org/en/blog/release/v16.20.2)
+4. npm: 8.19.4 [Link](https://www.npmjs.com/package/npm/v/8.19.4)
 
 ## Database Setup:
-1. Assuming that postgreSQL 16 and PgAdmin is installed on you PC, open the pgAdmin GUI
-2. In pgAdmin server, create a Database with name: `tranquilityDatabase`
-3. Right click on the tranquilityDatabase DB in PgAdmin, and choose queryTool
-4. In queryTool paste the SQL query present in file: `tablesMigration.sql` and click on Execute/Refresh option.
-5. tranquilityDatabase is now created and setup with the required tables
-6. Double check with database properties mentioned below and make necessary changes accordingly in `tranquility-backend-v1/index.js`  
+1. Assuming that PostgreSQL 16, and PgAdmin are installed open the pgAdmin GUI
+2. Create a PostgreSQL server if not created/not shown
+3. If a server exists in pgAdmin simply jump to step 3
+4. Create a 
+5. In the pgAdmin server, create a Database with the name: `tranquilityDatabase`
+6. Right-click on the tranquilityDatabase DB in PgAdmin, and choose queryTool
+7. In queryTool paste the SQL query present in the file: `tablesMigration.sql` and click on Execute/Refresh option.
+8. tranquilityDatabase is now created and set with the required tables
+9. Double check with database properties mentioned below and make necessary changes accordingly in `tranquility-backend-v1/index.js`  
     - `host: 'localhost'`
     - `database: 'tranquilityDatabase'`
     - `user: 'tranquilityAdmin'`
     - `password: 'tranquilityAdmin'`
     - `port: 5433`
     
-8. Insert/create few user before you proceed with any other tasks. Refer Postman collection `Create User` and create users with different email addresses.
+10. Insert/create few user before you proceed with any other tasks. Refer Postman collection `Create User` and create users with different email addresses.
 
 ## To start the backend application server:
 1. In terminal go to `tranquility-backend-v1` folder 
