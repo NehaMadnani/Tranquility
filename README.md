@@ -38,13 +38,11 @@ To merge your changes into the main project, follow these steps:
 ## Database Setup:
 1. Assuming that PostgreSQL 16, and PgAdmin are installed open the pgAdmin GUI
 2. Create a PostgreSQL server if not created/not shown
-3. If a server exists in pgAdmin simply jump to step 3
-4. Create a 
-5. In the pgAdmin server, create a Database with the name: `tranquilityDatabase`
-6. Right-click on the tranquilityDatabase DB in PgAdmin, and choose queryTool
-7. In queryTool paste the SQL query present in the file: `tablesMigration.sql` and click on Execute/Refresh option.
-8. tranquilityDatabase is now created and set with the required tables
-9. Double check with database properties mentioned below and make necessary changes accordingly in `tranquility-backend-v1/index.js`  
+3. In the pgAdmin server, create a Database with the name: `tranquilityDatabase`
+4. Right-click on the tranquilityDatabase DB in PgAdmin, and choose queryTool
+5. In queryTool paste the SQL query present in the file: `tablesMigration.sql` and click on Execute/Refresh option.
+6. tranquilityDatabase is now created and set with the required tables
+7. Double check with database properties mentioned below and make necessary changes accordingly in `tranquility-backend-v1/index.js`  
     - `host: 'localhost'`
     - `database: 'tranquilityDatabase'`
     - `user: 'tranquilityAdmin'`
