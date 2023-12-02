@@ -49,34 +49,26 @@ To merge your changes into the main project, follow these steps:
             `port: 5433`
 8. Insert/create few user before you proceed with any other tasks. Refer Postman collection `Create User` and create users with different email addresses.
 
-## To Start the backend application server:
+## To start the backend application server:
 1. In terminal go to `tranquility-backend-v1` folder 
 2. Install dependencies : `npm i` (Skip this step if already installed)
-3. To start the server: `npm start`
-
-    Note: 
-    Application by default starts on port: 3000
+3. To start the server: `npm start` (Application by default starts on port: 3000)
 
 ## Routes
 
 - GET  /users
     This route fetches all the existing users
-
 - POST  /users 
     This route used to create a user
-    
     Note: field email is UNIQUE and hence duplicates are not allowed. Use different email value for every new request
-    
     Refer: Postman Collection's `Create User /users`
 
 - POST  /questionnaire
     This route is used to set the questionnaire for exisiting users
-
     Refer: Postman Collection's `Questionnaire /questionnaire`
 
 - POST  /userinteractionfeedback
     This route is used to set the user interaction feedback for the media files
-
     Refer: Postman Collection's `Media Feedback /userinteractionfeedback`
     
 ## Test Cases
